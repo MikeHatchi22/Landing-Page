@@ -72,6 +72,18 @@ body {
     }
 }
 
+.topbar img {
+    zoom: 300%;
+    max-width: 60px;
+    max-width: 40px;
+}
+
+@media (prefers-color-scheme: dark) {
+    .topbar img {
+        filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(165deg) brightness(112%) contrast(104%);
+    }
+}
+
 /*Menu Ul et Li*/
 
 .menu {
@@ -99,6 +111,12 @@ body {
     background-color: var(--primary-background);
     align-items: center;
     padding: 96px;
+}
+
+@media only screen and (max-width: 1000px) {
+    .section1 {
+        padding: 48px 24px;
+    }
 }
 
 /*Conteneur qui contient l'ilustration et le group 1*/
