@@ -1,6 +1,7 @@
 :root {
     --primary-text: #12141D;
     --primary-background: #FAFAFA;
+    --white-background: #FFFFFF;
     --second-background: #18181B;
     --primary-button: #EF4444;
     --primary-border: #E4E4E7;
@@ -33,6 +34,13 @@ time, mark, audio, video {
 body {
     background-color: var(--primary-background);
     display: grid;
+}
+
+@media (prefers-color-scheme: dark) {
+    body, header, nav.topbar, section.section1, section.section2, section.section-pricing, .container2, div {
+        background-color: var(--second-background);
+        --primary-text: #FFFFFF;
+    }
 }
 
 /*Navbar*/
@@ -91,12 +99,6 @@ body {
     background-color: var(--primary-background);
     align-items: center;
     padding: 96px;
-}
-
-@media only screen and (max-width: 1000px) {
-    .section1 {
-        padding: 48px 24px;
-    }
 }
 
 /*Conteneur qui contient l'ilustration et le group 1*/
@@ -162,7 +164,7 @@ body {
 .section2 {
     display: flex;
     flex-direction: column;
-    background-color: white;
+    background-color: var(--white-background);
     padding: 96px;
     row-gap: 148px;
 }
@@ -391,6 +393,12 @@ body {
     border-radius: 5px;
 }
 
+@media (prefers-color-scheme: dark) {
+    .card-pricing {
+        background-color: #333;
+    }
+}
+
 .card-pricing h1 {
     color: var(--primary-text);
 }
@@ -455,6 +463,12 @@ body {
     .store-connect {
         flex-direction: column;
         row-gap: 24px;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    div.connect, div.store {
+        background-color: #333;
     }
 }
 
